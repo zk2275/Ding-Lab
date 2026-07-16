@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Figure placeholder">
+  <rect width="800" height="600" fill="#EDE0CE"/>
+  <!-- light chart-like motif -->
+  <g stroke="#DFD0BC" stroke-width="6" fill="none" stroke-linecap="round">
+    <line x1="120" y1="120" x2="120" y2="470"/>
+    <line x1="120" y1="470" x2="680" y2="470"/>
+    <polyline points="120,420 250,330 380,360 510,220 680,180"/>
+  </g>
+  <g fill="#DFD0BC">
+    <circle cx="250" cy="330" r="10"/>
+    <circle cx="380" cy="360" r="10"/>
+    <circle cx="510" cy="220" r="10"/>
+    <circle cx="680" cy="180" r="10"/>
+  </g>
+  <text x="400" y="545" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
+        font-size="26" font-style="italic" fill="#6F5D4A">Figure forthcoming</text>
+</svg>

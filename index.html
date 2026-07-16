@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ding Lab — Biostatistics, University of Pittsburgh</title>
+  <meta name="description" content="The Ding Lab, led by Ying Ding at the University of Pittsburgh, develops statistical methods for complex survival and multi-omics data in service of precision medicine.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== SHARED HEADER — keep identical across all pages (only aria-current moves) ===== -->
+  <header class="site-header">
+    <div class="wrap">
+      <a class="site-title" href="index.html">Ding Lab</a>
+      <p class="site-tagline">Biostatistics &middot; University of Pittsburgh</p>
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- ===== /SHARED HEADER ===== -->
+
+  <!-- Hero banner. Background photo is set in CSS (.hero) — currently assets/img/pittsburgh.jpg.
+       TODO: to swap it, change the url() in style.css (.hero). If a brighter photo is used,
+       deepen the overlay alpha in style.css (.hero::before) so the cream text stays legible. -->
+  <section class="hero" aria-label="Introduction">
+    <div class="hero-inner">
+      <h1 class="hero-title">Ding Lab</h1>
+      <p class="hero-tagline">Principled statistical methods for complex biomedical data, in service of precision medicine.</p>
+    </div>
+  </section>
+
+  <main id="main">
+    <section class="intro" aria-label="About the lab">
+      <figure class="portrait">
+        <img src="assets/img/Ding_Ying.jpg" alt="Ying Ding">
+        <figcaption>Ying Ding</figcaption>
+      </figure>
+      <div class="intro-body">
+        <!-- TODO: confirm current title. Live site lists "Professor of Biostatistics"; 2022 CV lists "Associate Professor (Tenured)". -->
+        <p class="lead">The Ding Lab is the research group of <strong>Ying Ding</strong>, Professor
+        of Biostatistics at the University of Pittsburgh.</p>
+
+        <p>We develop rigorous statistical methodology for complex biomedical data &mdash;
+        semiparametric methods for time-to-event data, subgroup and individualized-effect inference
+        in precision medicine, and statistical and machine-learning approaches for high-dimensional
+        genetic and multi-omics data. The methods we build are shaped by real scientific questions,
+        developed hand in hand with our collaborators.</p>
+
+        <!-- TODO: trim or personalize this line in Dr. Ding's voice if desired -->
+        <p>We are a small, close group, and we care as much about how we work &mdash; carefully, and
+        generously with one another &mdash; as about what we publish.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="interests-heading">
+      <h2 id="interests-heading">Research interests</h2>
+      <!-- TODO: The citations below were pulled from Google Scholar (July 2026). Scholar is not
+           always accurate — please check years/journals, and add or drop papers as you like.
+           Format follows: (first author) year Journal. -->
+      <div class="interests">
+
+        <article class="interest">
+          <h3 class="i-title">Semiparametric &amp; neural methods for complex time-to-event data</h3>
+          <p class="i-desc">Copula and transformation models for interval-censored, left-truncated,
+          and bivariate survival outcomes, and — more recently — neural and deep Cox models for
+          dynamic prediction, together with the estimation theory and software behind them.</p>
+          <p class="i-pubs"><span class="i-pubs-label">Recent work</span>
+            (Zeng) 2026 <em>JASA</em> &middot;
+            (Zeng) 2025 <em>JRSS-C</em> &middot;
+            (Liu) 2025 <em>Statistics in Medicine</em> &middot;
+            (Sun) 2022 <em>Biometrics</em> &middot;
+            (Sun) 2021 <em>Biostatistics</em>
+          </p>
+        </article>
+
+        <article class="interest">
+          <h3 class="i-title">Precision medicine: subgroups &amp; individualized treatment effects</h3>
+          <p class="i-desc">Identifying subgroups with differential treatment efficacy and drawing
+          logically coherent inference about them, and estimating heterogeneous and individualized
+          treatment effects — increasingly from observational and electronic health record data.</p>
+          <p class="i-pubs"><span class="i-pubs-label">Recent work</span>
+            (Bo) 2026 <em>Lifetime Data Analysis</em> &middot;
+            (Sui) 2025 <em>Biostatistics</em> &middot;
+            (Bo) 2025 <em>Statistics in Medicine</em> &middot;
+            (Wei) 2021 <em>Statistics in Medicine</em> &middot;
+            (Ding) 2018 <em>Annals of Applied Statistics</em>
+          </p>
+        </article>
+
+        <article class="interest">
+          <h3 class="i-title">Genetics, multi-omics &amp; machine learning</h3>
+          <p class="i-desc">Statistical and deep-learning methods for high-dimensional biological
+          data: prediction from genome-wide association and longitudinal imaging data, model-based
+          clustering of single-cell data, and the integration of multiple omics modalities.</p>
+          <p class="i-pubs"><span class="i-pubs-label">Recent work</span>
+            (Zhang) 2025 <em>AI Sensors</em> &middot;
+            (Zhou) 2024 <em>Briefings in Bioinformatics</em> &middot;
+            (Yan) 2020 <em>Nature Machine Intelligence</em> &middot;
+            (Sun) 2020 <em>Statistics in Medicine</em> &middot;
+            (Wang) 2020 <em>Nucleic Acids Research</em>
+          </p>
+        </article>
+
+        <article class="interest">
+          <h3 class="i-title">Collaborative &amp; translational studies</h3>
+          <p class="i-desc">Long-standing partnerships that supply the questions behind the
+          methodology — age-related macular degeneration, Alzheimer's disease and related psychosis,
+          pancreatitis, colon cancer, and pediatric asthma.</p>
+          <p class="i-pubs"><span class="i-pubs-label">Recent work</span>
+            (Jiang) 2026 <em>CNS Drugs</em> &middot;
+            (Swaminathan) 2025 <em>Pancreatology</em> &middot;
+            (Chen) 2024 <em>Journal of Clinical Oncology</em> &middot;
+            (Liu) 2024 <em>Journal of Statistical Research</em>
+          </p>
+        </article>
+
+      </div>
+      <p class="i-more"><a href="research.html">Full research description &rarr;</a> &middot;
+      <a href="publications.html">All publications &rarr;</a></p>
+    </section>
+
+    <section aria-labelledby="news-heading">
+      <h2 id="news-heading">Recent news</h2>
+      <!-- TODO: These three items are real papers (via Google Scholar, July 2026), used as a
+           starting point so the section isn't empty. Please (a) confirm each first author is the
+           student named here, and (b) replace/extend with actual lab news — defences, awards,
+           new members, talks. Years only: Scholar didn't give publication months. -->
+      <ul class="news">
+        <li>
+          <span class="news-date">2026</span>
+          <p>Lang Zeng's work on mini-batch estimation for deep Cox models appears in the
+          <em>Journal of the American Statistical Association</em>.</p>
+        </li>
+        <li>
+          <span class="news-date">2026</span>
+          <p>Na Bo's paper on interpretable heterogeneous treatment effects through causal subgroup
+          discovery appears in <em>Lifetime Data Analysis</em>.</p>
+        </li>
+        <li>
+          <span class="news-date">2025</span>
+          <p>Zhiyu Sui's paper on robust transfer learning for individualized treatment rules
+          appears in <em>Biostatistics</em>.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="gallery-heading" class="gallery-section">
+      <h2 id="gallery-heading">In the lab</h2>
+      <p class="gallery-note">Moments from the group. <!-- TODO: tweak or delete this line --></p>
+    </section>
+  </main>
+
+  <!-- ===== ROLLING GALLERY =====
+       Full-bleed strip that scrolls on its own. It pauses when you hover or tab into it, and
+       holds still for visitors who prefer reduced motion.
+
+       TO ADD A PHOTO: drop the file in assets/img/, then add ONE <figure> to *each* of the two
+       tracks below (.marquee-set). The second set is an exact copy — it exists only to make the
+       loop seamless, and is hidden from screen readers. The two sets MUST stay identical.
+
+       Direction: images currently travel left -> right. To reverse, change
+       `animation-direction` on .marquee-track in style.css from `reverse` to `normal`.
+       Speed: change the `40s` in the .marquee-track animation (bigger = slower). -->
+  <div class="marquee" role="group" aria-label="Photo gallery from the lab" tabindex="0">
+    <div class="marquee-track">
+
+      <!-- ---------- set 1 (the real one) ---------- -->
+      <div class="marquee-set">
+        <figure>
+          <img src="assets/img/public_health.jpg" alt="Pitt Public Health, home of the Department of Biostatistics">
+          <figcaption>Pitt Public Health</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/teaching.jpg" alt="A graduate biostatistics class">
+          <figcaption>In the classroom</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/pittsburgh.jpg" alt="The city of Pittsburgh">
+          <figcaption>Our city</figcaption>
+        </figure>
+        <!-- TODO: swap these placeholders for real photos (group meetings, conferences, defenses…) -->
+        <figure>
+          <img src="assets/img/figure-placeholder.svg" alt="Placeholder image">
+          <figcaption>Group meeting</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/figure-placeholder.svg" alt="Placeholder image">
+          <figcaption>Conference travel</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/figure-placeholder.svg" alt="Placeholder image">
+          <figcaption>Celebrating a milestone</figcaption>
+        </figure>
+      </div>
+
+      <!-- ---------- set 2: exact copy of set 1, for the seamless loop ---------- -->
+      <div class="marquee-set" aria-hidden="true">
+        <figure>
+          <img src="assets/img/public_health.jpg" alt="">
+          <figcaption>Pitt Public Health</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/teaching.jpg" alt="">
+          <figcaption>In the classroom</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/pittsburgh.jpg" alt="">
+          <figcaption>Our city</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/figure-placeholder.svg" alt="">
+          <figcaption>Group meeting</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/figure-placeholder.svg" alt="">
+          <figcaption>Conference travel</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/figure-placeholder.svg" alt="">
+          <figcaption>Celebrating a milestone</figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </div>
+  <!-- ===== /ROLLING GALLERY ===== -->
+
+  <!-- ===== SHARED FOOTER — keep identical across all pages ===== -->
+  <footer class="site-footer">
+    <div class="wrap foot-inner">
+      <!-- TODO: update the year (or wire up a small script) -->
+      <p>&copy; 2026 Ding Lab &middot; Department of Biostatistics, University of Pittsburgh &middot; <a href="mailto:yingding@pitt.edu">yingding@pitt.edu</a></p>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+  <!-- ===== /SHARED FOOTER ===== -->
+</body>
+</html>

@@ -1,0 +1,16 @@
+name: Check site
+
+# Runs on every push and pull request. If something in the site is broken, this
+# fails with a plain-English explanation before the change reaches the live page.
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run site checks
+        run: python3 tools/check.py

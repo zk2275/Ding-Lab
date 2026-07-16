@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="380" height="460" viewBox="0 0 380 460" role="img" aria-label="Portrait placeholder">
+  <rect width="380" height="460" fill="#EDE0CE"/>
+  <g fill="#DFD0BC">
+    <circle cx="190" cy="176" r="76"/>
+    <path d="M64 460c0-74 56-134 126-134s126 60 126 134z"/>
+  </g>
+  <text x="190" y="432" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
+        font-size="20" font-style="italic" fill="#6F5D4A">Photo forthcoming</text>
+</svg>

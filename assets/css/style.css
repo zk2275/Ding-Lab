@@ -1,0 +1,609 @@
+/* ==========================================================================
+   Ying Ding Lab — shared stylesheet
+   Classical academic elegance with a warm, luxe register:
+   "high-priced wood" — walnut/espresso browns on a soft warm-beige ground.
+   Restrained on purpose. Edit palette below.
+   ========================================================================== */
+
+:root {
+  /* Color palette (warm "wood + skin", AA-checked) */
+  --bg:            #F5ECDE;  /* warm light beige page background */
+  --bg-panel:      #EDE0CE;  /* soft warm sand: footer, callouts, headshot */
+  --text:          #2A2119;  /* primary text, dark espresso */
+  --text-muted:    #6F5D4A;  /* secondary text, warm taupe */
+  --accent:        #5A3E2B;  /* walnut brown: headings, links, rules */
+  --accent-dark:   #3E2A1C;  /* hover / pressed */
+  --hairline:      #DFD0BC;  /* borders, dividers */
+
+  /* Type */
+  --font-head: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+
+  /* Measure & rhythm */
+  --wrap:  48rem;   /* header / footer width */
+  --prose: 42rem;   /* reading measure (~65ch) */
+  --pad:   1.5rem;
+}
+
+/* ------------------------------------------------------------------ Reset-ish */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1.125rem;      /* 18px */
+  line-height: 1.65;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+/* -------------------------------------------------------------- Skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+}
+.skip-link:focus {
+  left: 0.75rem;
+  top: 0.75rem;
+}
+
+/* --------------------------------------------------------------- Wrappers */
+.wrap {
+  width: 100%;
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding-inline: var(--pad);
+}
+
+/* ---------------------------------------------------------------- Header */
+.site-header {
+  border-bottom: 1px solid var(--hairline);
+  padding-block: 1.75rem 0;
+}
+.site-title {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 1.9rem;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  color: var(--accent);
+  text-decoration: none;
+  display: inline-block;
+}
+.site-title:hover,
+.site-title:focus-visible { color: var(--accent-dark); }
+.site-tagline {
+  margin: 0.15rem 0 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Navigation */
+.main-nav {
+  margin-top: 1.25rem;
+}
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.4rem;
+}
+.main-nav a {
+  display: inline-block;
+  padding: 0.35rem 0;
+  font-size: 0.98rem;
+  letter-spacing: 0.02em;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 120ms ease, border-color 120ms ease;
+}
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  color: var(--accent);
+  border-bottom-color: var(--hairline);
+}
+.main-nav a[aria-current="page"] {
+  color: var(--accent);
+  font-weight: 600;
+  border-bottom-color: var(--accent);
+}
+
+/* ------------------------------------------------------------------ Main */
+main {
+  max-width: var(--prose);
+  margin-inline: auto;
+  padding: 3rem var(--pad) 4rem;
+}
+
+/* Page header block */
+.page-header { margin-bottom: 2.5rem; }
+.page-title {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  line-height: 1.08;
+  letter-spacing: 0.005em;
+  color: var(--accent);
+  margin: 0;
+}
+.page-header .rule {
+  width: 3.5rem;
+  height: 2px;
+  background: var(--accent);
+  border: 0;
+  margin: 1.1rem 0 0;
+}
+
+/* Lead paragraph — used on the warmer pages */
+.lead {
+  font-size: 1.3rem;
+  line-height: 1.55;
+  color: var(--text);
+  margin: 1.4rem 0 0;
+}
+.lead-italic {
+  font-family: var(--font-head);
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--accent);
+  line-height: 1.4;
+  margin: 1rem 0 0;
+}
+
+/* ----------------------------------------------------------- Typography */
+h2 {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 1.75rem;
+  line-height: 1.15;
+  color: var(--accent);
+  margin: 2.75rem 0 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--hairline);
+}
+h3 {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 1.35rem;
+  line-height: 1.2;
+  color: var(--text);
+  margin: 2rem 0 0.5rem;
+}
+p { margin: 0 0 1.15rem; }
+main > section > p:last-child { margin-bottom: 0; }
+
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--hairline);
+  transition: color 120ms ease, text-decoration-color 120ms ease;
+}
+a:hover,
+a:focus-visible {
+  color: var(--accent-dark);
+  text-decoration-color: currentColor;
+}
+
+strong { font-weight: 600; }
+em { font-style: italic; }
+
+hr.divider {
+  border: 0;
+  border-top: 1px solid var(--hairline);
+  margin: 2.5rem 0;
+}
+
+/* --------------------------------------------------- CV-style definition lists */
+/* Education, appointments, courses: label + detail rows */
+.cv-list {
+  margin: 1.25rem 0 0;
+  display: grid;
+  gap: 1.4rem;
+}
+.cv-item {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 0.25rem 1.5rem;
+}
+.cv-item .cv-when {
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.98rem;
+  padding-top: 0.1rem;
+}
+.cv-item .cv-what { margin: 0; }
+.cv-item .cv-what .cv-role { font-weight: 600; }
+.cv-item .cv-what .cv-where { color: var(--text-muted); display: block; font-size: 0.98rem; }
+
+/* Simple stacked list (awards, plain items) */
+.stack-list {
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.9rem;
+}
+.stack-list li {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  gap: 1.25rem;
+}
+.stack-list .yr {
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.98rem;
+}
+
+/* -------------------------------------------------------- Research interests */
+/* Home page: each interest = title + description + a line of recent citations. */
+.interests {
+  margin: 1.5rem 0 0;
+  display: grid;
+  gap: 2.25rem;
+}
+.interest .i-title {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 1.35rem;
+  line-height: 1.2;
+  color: var(--accent);
+  margin: 0 0 0.45rem;
+}
+.interest .i-desc { margin: 0 0 0.6rem; }
+.interest .i-pubs {
+  margin: 0;
+  padding-left: 1.1rem;
+  border-left: 2px solid var(--hairline);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+.interest .i-pubs-label {
+  display: block;
+  font-family: var(--font-head);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--accent);
+}
+.i-more { margin-top: 2.25rem; font-size: 0.95rem; }
+
+/* --------------------------------------------------------------- News list */
+.news {
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+.news li {
+  display: grid;
+  grid-template-columns: 6rem 1fr;
+  gap: 1.25rem;
+}
+.news .news-date {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  font-variant-numeric: tabular-nums;
+  padding-top: 0.05rem;
+}
+.news p { margin: 0; }
+
+/* -------------------------------------------------------------- Publications */
+.pub-year {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 1.75rem;
+  color: var(--accent);
+  margin: 2.75rem 0 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--hairline);
+}
+.pub-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1.4rem;
+}
+.pub-list li { padding-left: 1.1rem; border-left: 2px solid var(--hairline); }
+.pub-list .pub-title { font-weight: 600; }
+.pub-list .pub-venue { font-style: italic; color: var(--text-muted); }
+.pub-list .pub-meta { display: block; margin-top: 0.2rem; font-size: 0.95rem; }
+
+/* --------------------------------------------------------------- People */
+.people-group { margin-top: 1rem; }
+.person {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.1rem 0;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--hairline);
+}
+.person:last-child { border-bottom: 0; }
+.person .p-name { font-weight: 600; }
+.person .p-role { color: var(--text-muted); }
+
+/* PI card — a little warmth on the People page */
+.pi-card {
+  display: grid;
+  grid-template-columns: 9.5rem 1fr;
+  gap: 1.75rem;
+  align-items: start;
+  margin-top: 1.5rem;
+}
+.pi-card .headshot {
+  width: 9.5rem;
+  border: 1px solid var(--hairline);
+  background: var(--bg-panel);
+}
+.pi-card h3 { margin-top: 0; }
+.pi-card .p-role { color: var(--text-muted); margin-top: -0.25rem; }
+
+/* --------------------------------------------------------------- Callout */
+/* Warm note — prospective students, contact aside */
+.callout {
+  background: var(--bg-panel);
+  border-left: 3px solid var(--accent);
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0 0;
+}
+.callout p:last-child { margin-bottom: 0; }
+.callout h2,
+.callout h3 { border: 0; margin-top: 0; }
+
+/* Contact details block */
+.contact-list {
+  margin: 1.5rem 0 0;
+  display: grid;
+  gap: 1.1rem;
+}
+.contact-list .c-row { display: grid; grid-template-columns: 7rem 1fr; gap: 1.25rem; }
+.contact-list .c-label {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  letter-spacing: 0.02em;
+}
+.contact-list .c-value { margin: 0; }
+
+/* ---------------------------------------------------------------- Footer */
+.site-footer {
+  background: var(--bg-panel);
+  border-top: 1px solid var(--hairline);
+  color: var(--text-muted);
+  padding-block: 2rem;
+  font-size: 0.92rem;
+}
+.site-footer .foot-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem 2rem;
+}
+.site-footer p { margin: 0; }
+.site-footer a { color: var(--accent); }
+.site-footer nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.1rem;
+}
+.site-footer nav a { text-decoration: none; }
+.site-footer nav a:hover { text-decoration: underline; }
+
+/* ---------------------------------------------------------------- Hero (home) */
+.hero {
+  position: relative;
+  background-color: var(--accent-dark);
+  background-image: url("../img/pittsburgh.jpg");   /* swap this file to change the hero photo */
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid var(--hairline);
+}
+.hero::before {
+  /* solid warm wash (not a gradient) to keep overlaid text legible;
+     deepen the alpha if you swap in a bright photo */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(42, 33, 25, 0.45);
+}
+.hero-inner {
+  position: relative;
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding: clamp(3.25rem, 11vw, 6.5rem) var(--pad);
+  color: #F5ECDE;
+}
+.hero-title {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: clamp(3rem, 10vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: 0.01em;
+  margin: 0;
+  color: #F5ECDE;
+}
+.hero-tagline {
+  font-family: var(--font-head);
+  font-style: italic;
+  font-size: clamp(1.2rem, 3.2vw, 1.7rem);
+  line-height: 1.35;
+  margin: 0.7rem 0 0;
+  max-width: 36rem;
+  color: #EDE0CE;
+}
+
+/* ------------------------------------------------- Full-bleed page banner (16:9) */
+/* Used on teaching.html. Sits between the header and <main>, edge to edge. */
+.page-banner {
+  margin: 0;
+  width: 100%;
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--hairline);
+}
+.page-banner img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;   /* a non-16:9 photo is centre-cropped rather than squashed */
+  object-position: center;
+}
+
+/* ------------------------------------------------------- Home intro w/ portrait */
+.intro {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+.intro .portrait { margin: 0; }
+.intro .portrait img {
+  width: 190px;
+  border: 1px solid var(--hairline);
+  background: var(--bg-panel);
+}
+.intro .portrait figcaption {
+  margin-top: 0.5rem;
+  font-family: var(--font-head);
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+.intro-body > :first-child { margin-top: 0; }
+.intro-body .lead { margin-top: 0; }
+
+/* ------------------------------------------------------------ Rolling gallery */
+/* Full-bleed auto-scrolling photo strip (home page, below the news list).
+   Two identical .marquee-set tracks slide by; translating 50% swaps one for the
+   other, so the loop is seamless. Pauses on hover/focus; stops entirely for
+   visitors who prefer reduced motion. */
+.gallery-note {
+  margin: 0.35rem 0 0;
+  color: var(--text-muted);
+  font-style: italic;
+}
+.marquee {
+  overflow: hidden;
+  padding-block: 1.75rem 3rem;
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 40s linear infinite;
+  animation-direction: reverse;   /* images travel left -> right; `normal` reverses it */
+}
+/* pause mechanism (hover, or keyboard focus on the strip) */
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track { animation-play-state: paused; }
+
+.marquee-set { display: flex; }
+.marquee figure {
+  margin: 0 1rem 0 0;
+  flex: 0 0 auto;
+  width: 260px;
+}
+.marquee img {
+  width: 260px;
+  height: 185px;
+  object-fit: cover;
+  border: 1px solid var(--hairline);
+  background: var(--bg-panel);
+}
+.marquee figcaption {
+  margin-top: 0.45rem;
+  font-size: 0.88rem;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+  .marquee { overflow-x: auto; }   /* still browsable by scrolling */
+}
+
+/* -------------------------------------------------------------- Research figure */
+figure.research-figure { margin: 1.5rem 0 0; }
+figure.research-figure img {
+  width: 100%;
+  border: 1px solid var(--hairline);
+  background: var(--bg-panel);
+}
+figure.research-figure figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+/* --------------------------------------------------------- People photo grid */
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 2rem 1.5rem;
+  margin-top: 1.5rem;
+}
+.member-card { margin: 0; }
+.member-card .avatar {
+  width: 100%;
+  max-width: 160px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid var(--hairline);
+  background: var(--bg-panel);
+}
+.member-card figcaption { margin-top: 0.75rem; }
+.member-card .m-name { font-weight: 600; margin: 0; }
+.member-card .m-role { color: var(--text-muted); font-size: 0.95rem; margin: 0.1rem 0 0; }
+
+/* ------------------------------------------------------------ Focus states */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* --------------------------------------------------------------- Responsive */
+@media (max-width: 34rem) {
+  body { font-size: 1.06rem; }
+  main { padding-top: 2.25rem; }
+  .cv-item { grid-template-columns: 1fr; gap: 0.15rem; }
+  .stack-list li { grid-template-columns: 3.25rem 1fr; gap: 0.85rem; }
+  .news li { grid-template-columns: 1fr; gap: 0.15rem; }
+  .contact-list .c-row { grid-template-columns: 1fr; gap: 0.1rem; }
+  .pi-card { grid-template-columns: 1fr; gap: 1rem; }
+  .pi-card .headshot { width: 8rem; }
+  .lead { font-size: 1.2rem; }
+  .intro { grid-template-columns: 1fr; gap: 1.25rem; }
+  .intro .portrait img { width: 150px; }
+  .people-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 1.5rem 1.25rem; }
+  .member-card .avatar { max-width: 130px; }
+  .marquee figure { width: 200px; }
+  .marquee img { width: 200px; height: 142px; }
+  .marquee { padding-block: 1.25rem 2.25rem; }
+}
