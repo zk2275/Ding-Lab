@@ -17,7 +17,7 @@
   <header class="site-header">
     <div class="wrap">
       <a class="site-title" href="index.html">Ding Lab</a>
-      <p class="site-tagline">Biostatistics &middot; University of Pittsburgh</p>
+      <p class="site-tagline">Biostatistics and Health Data Science &middot; <span class="pitt">University of Pittsburgh</span></p>
       <nav class="main-nav" aria-label="Primary">
         <ul>
           <li><a href="index.html" aria-current="page">Home</a></li>
@@ -44,6 +44,18 @@
   </section>
 
   <main id="main">
+    <!-- Affiliation banner (badge + department + address), in the manner of husainlab.org.
+         The badge already reads "University of Pittsburgh · School of Public Health", so the
+         text beside it carries the department and street address. -->
+    <section class="affiliation" aria-label="Affiliation">
+      <img class="affiliation-badge" src="assets/img/School_of_Public_Health.png"
+           alt="University of Pittsburgh School of Public Health">
+      <div class="affiliation-text">
+        <p class="aff-dept">Department of Biostatistics and Health Data Science</p>
+        <p class="aff-addr">A713 Public Health &middot; 130 DeSoto Street &middot; Pittsburgh, PA 15261</p>
+      </div>
+    </section>
+
     <section class="intro" aria-label="About the lab">
       <figure class="portrait">
         <img src="assets/img/Ding_Ying.jpg" alt="Ying Ding">
@@ -51,7 +63,8 @@
       </figure>
       <div class="intro-body">
         <p class="lead">The Ding Lab is the research group of <strong>Ying Ding</strong>, Professor
-        of Biostatistics at the University of Pittsburgh.</p>
+        in the Department of Biostatistics and Health Data Science and Associate Dean for Graduate
+        Academic Affairs at the <span class="pitt">University of Pittsburgh</span>.</p>
 
         <p>We develop rigorous statistical methodology for complex biomedical data &mdash;
         semiparametric methods for time-to-event data, subgroup and individualized-effect inference
@@ -134,25 +147,27 @@
 
     <section aria-labelledby="news-heading">
       <h2 id="news-heading">Recent news</h2>
-      <!-- TODO: These three items are real papers (via Google Scholar, July 2026), used as a
-           starting point so the section isn't empty. Please (a) confirm each first author is the
-           student named here, and (b) replace/extend with actual lab news — defences, awards,
-           new members, talks. Years only: Scholar didn't give publication months. -->
+      <!-- TODO: These items are drawn from Dr. Ding's June 2026 CV. Add new items on top as they
+           happen (defences, awards, papers, talks); the newest should come first. -->
       <ul class="news">
         <li>
           <span class="news-date">2026</span>
-          <p>Lang Zeng's work on mini-batch estimation for deep Cox models appears in the
-          <em>Journal of the American Statistical Association</em>.</p>
+          <p>Ying Ding is named Statistician of the Year by the American Statistical Association,
+          Pittsburgh Chapter.</p>
         </li>
         <li>
           <span class="news-date">2026</span>
-          <p>Na Bo's paper on interpretable heterogeneous treatment effects through causal subgroup
-          discovery appears in <em>Lifetime Data Analysis</em>.</p>
+          <p>Congratulations to <strong>Lang Zeng</strong> on completing his Ph.D.,
+          <em>Rank-based Deep Learning for Survival Analysis</em>.</p>
         </li>
         <li>
           <span class="news-date">2025</span>
-          <p>Zhiyu Sui's paper on robust transfer learning for individualized treatment rules
-          appears in <em>Biostatistics</em>.</p>
+          <p>Ying Ding is elected a Fellow of the American Statistical Association.</p>
+        </li>
+        <li>
+          <span class="news-date">2025</span>
+          <p>Congratulations to <strong>Na Bo</strong> and <strong>Zhiyu Sui</strong> on completing
+          their Ph.D.s.</p>
         </li>
       </ul>
     </section>
@@ -180,7 +195,7 @@
       <!-- ---------- set 1 (the real one) ---------- -->
       <div class="marquee-set">
         <figure>
-          <img src="assets/img/public_health.jpg" alt="Pitt Public Health, home of the Department of Biostatistics">
+          <img src="assets/img/public_health.jpg" alt="Pitt Public Health, home of the Department of Biostatistics and Health Data Science">
           <figcaption>Pitt Public Health</figcaption>
         </figure>
         <figure>
@@ -242,7 +257,7 @@
   <footer class="site-footer">
     <div class="wrap foot-inner">
       <!-- TODO: update the year (or wire up a small script) -->
-      <p>&copy; 2026 Ding Lab &middot; Department of Biostatistics, University of Pittsburgh &middot; <a href="mailto:yingding@pitt.edu">yingding@pitt.edu</a></p>
+      <p>&copy; 2026 Ding Lab &middot; Department of Biostatistics and Health Data Science, <span class="pitt">University of Pittsburgh</span> &middot; <a href="mailto:yingding@pitt.edu">yingding@pitt.edu</a></p>
       <nav aria-label="Footer">
         <ul>
           <li><a href="index.html">Home</a></li>

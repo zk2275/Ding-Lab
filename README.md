@@ -121,6 +121,7 @@ In use:
 | `Ding_Ying.jpg` | Home intro portrait, People PI card | |
 | `public_health.jpg` | Rolling gallery | |
 | `teaching.jpg` | Teaching banner, rolling gallery | Banner is full-bleed 16:9 (`.page-banner`); natively 16:9, so no crop. |
+| `School_of_Public_Health.png` | Home affiliation badge | Official Pitt School of Public Health logo (transparent PNG). Sits in the `.affiliation` block below the hero. |
 
 Still placeholders, swap when you have real files:
 
@@ -172,4 +173,7 @@ a branch → `main` → `/ (root)`), usually within a minute or two.
 - Palette is a warm "walnut on beige" scheme — no drop shadows or gradients. Keep it that
   way for the classical-academic feel.
 - The rolling gallery is the one deliberate piece of motion; everything else is static.
+- "University of Pittsburgh" is wrapped in `<span class="pitt">` so it shows in the official
+  Pitt blue (`--pitt-blue` in `style.css`). The department's formal name is
+  **Biostatistics and Health Data Science**.
 - Content still marked `<!-- TODO: -->` throughout — search the project for `TODO`.

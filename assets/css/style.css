@@ -14,6 +14,7 @@
   --accent:        #5A3E2B;  /* walnut brown: headings, links, rules */
   --accent-dark:   #3E2A1C;  /* hover / pressed */
   --hairline:      #DFD0BC;  /* borders, dividers */
+  --pitt-blue:     #003594;  /* University of Pittsburgh official blue */
 
   /* Type */
   --font-head: "Cormorant Garamond", Georgia, "Times New Roman", serif;
@@ -456,6 +457,34 @@ hr.divider {
   color: #EDE0CE;
 }
 
+/* ----------------------------------------------------- Pitt blue brand accent */
+/* Used on "University of Pittsburgh" to align with the university's colour. */
+.pitt { color: var(--pitt-blue); }
+
+/* ---------------------------------------------------- Affiliation block (home) */
+/* Institution badge on the left, department + address on the right (Husain-style). */
+.affiliation {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  flex-wrap: wrap;
+  padding-bottom: 1.9rem;
+  margin-bottom: 2.25rem;
+  border-bottom: 1px solid var(--hairline);
+}
+.affiliation-badge {
+  height: 68px;
+  width: auto;
+  flex: 0 0 auto;
+}
+.affiliation-text p { margin: 0; }
+.affiliation-text .aff-dept { font-weight: 600; }
+.affiliation-text .aff-addr {
+  margin-top: 0.35rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
 /* ------------------------------------------------- Full-bleed page banner (16:9) */
 /* Used on teaching.html. Sits between the header and <main>, edge to edge. */
 .page-banner {
@@ -606,4 +635,6 @@ figure.research-figure figcaption {
   .marquee figure { width: 200px; }
   .marquee img { width: 200px; height: 142px; }
   .marquee { padding-block: 1.25rem 2.25rem; }
+  .affiliation { gap: 1rem; }
+  .affiliation-badge { height: 54px; }
 }
