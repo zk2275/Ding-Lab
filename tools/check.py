@@ -119,6 +119,17 @@ def check_images_exist():
             )
 
 
+def check_asset_links():
+    """Any href into assets/ (e.g. the CV download) must point at a real file."""
+    for p in pages():
+        for href in sorted(set(re.findall(r'href="(assets/[^"#?]+)"', read(p)))):
+            if not exists_exact(href):
+                err(
+                    f"{p}: links to {href}, which does not exist "
+                    f"(check spelling and capitalisation)."
+                )
+
+
 def check_img_alt():
     for p in pages():
         for tag in re.findall(r"<img\s[^>]*>", read(p)):
@@ -157,6 +168,7 @@ def main():
         check_aria_current,
         check_internal_links,
         check_images_exist,
+        check_asset_links,
         check_img_alt,
         check_marquee_sets,
     ):

@@ -165,6 +165,10 @@ main {
   margin: 1.1rem 0 0;
 }
 
+/* "Download CV" link under a page title */
+.cv-line { margin: 0 0 2rem; }
+.cv-line a { font-weight: 600; }
+
 /* Lead paragraph — used on the warmer pages */
 .lead {
   font-size: 1.3rem;
@@ -383,6 +387,7 @@ hr.divider {
 .callout p:last-child { margin-bottom: 0; }
 .callout h2,
 .callout h3 { border: 0; margin-top: 0; }
+.callout .eeo { font-size: 0.88rem; color: var(--text-muted); margin-top: 0.75rem; }
 
 /* Contact details block */
 .contact-list {
