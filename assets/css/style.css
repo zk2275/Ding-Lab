@@ -21,9 +21,9 @@
   --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
 
   /* Measure & rhythm */
-  --wrap:  52rem;   /* header / footer width */
-  --prose: 46rem;   /* reading measure */
-  --pad:   1.25rem;
+  --wrap:  66rem;   /* header / footer width */
+  --prose: 60rem;   /* reading measure (wide, per request for narrow margins) */
+  --pad:   1rem;
 }
 
 /* ------------------------------------------------------------------ Reset-ish */
