@@ -21,9 +21,9 @@
   --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
 
   /* Measure & rhythm */
-  --wrap:  48rem;   /* header / footer width */
-  --prose: 42rem;   /* reading measure (~65ch) */
-  --pad:   1.5rem;
+  --wrap:  52rem;   /* header / footer width */
+  --prose: 46rem;   /* reading measure */
+  --pad:   1.25rem;
 }
 
 /* ------------------------------------------------------------------ Reset-ish */
@@ -74,7 +74,7 @@ img { max-width: 100%; height: auto; display: block; }
 /* ---------------------------------------------------------------- Header */
 .site-header {
   border-bottom: 1px solid var(--hairline);
-  padding-block: 1.2rem 0;
+  padding-block: 2.1rem 0;
 }
 /* One masthead row: institution badge on the left, primary nav to its right. */
 .site-header-inner {
@@ -334,9 +334,9 @@ hr.divider {
 .people-group { margin-top: 1rem; }
 .person {
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.1rem 0;
-  padding: 0.9rem 0;
+  grid-template-columns: 12.5rem 1fr;
+  gap: 0.15rem 1.75rem;
+  padding: 0.7rem 0;
   border-bottom: 1px solid var(--hairline);
 }
 .person:last-child { border-bottom: 0; }
@@ -447,24 +447,16 @@ hr.divider {
   color: #F5ECDE;
 }
 
-/* ----------------------------------------------------- Pitt blue brand accent */
-/* Used on "University of Pittsburgh" to align with the university's colour. */
-.pitt { color: var(--pitt-blue); }
+/* ".pitt" spans are kept in the markup but no longer coloured — "University of
+   Pittsburgh" now reads in the same colour as surrounding text. */
+.pitt { color: inherit; }
 
-/* ---------------------------------------------------- Affiliation block (home) */
-/* Department + street address, below the hero. */
-.affiliation {
-  padding-bottom: 1.9rem;
-  margin-bottom: 2.25rem;
-  border-bottom: 1px solid var(--hairline);
-}
-.affiliation-text p { margin: 0; }
-.affiliation-text .aff-dept { font-weight: 600; }
-.affiliation-text .aff-addr {
-  margin-top: 0.35rem;
-  color: var(--text-muted);
-  font-size: 0.95rem;
-}
+/* -------------------------------------------- Affiliation inside the hero (home) */
+/* Department + street address, directly under the "Ding Lab" hero title. */
+.hero .affiliation-text { margin-top: 1rem; }
+.hero .affiliation-text p { margin: 0; }
+.hero .aff-dept { color: #F5ECDE; font-weight: 600; font-size: 1.15rem; }
+.hero .aff-addr { color: #EDE0CE; font-size: 0.95rem; margin-top: 0.25rem; }
 
 /* ------------------------------------------------- Full-bleed page banner (16:9) */
 /* Used on teaching.html. Sits between the header and <main>, edge to edge. */
@@ -480,60 +472,6 @@ hr.divider {
   aspect-ratio: 16 / 9;
   object-fit: cover;   /* a non-16:9 photo is centre-cropped rather than squashed */
   object-position: center;
-}
-
-/* ------------------------------------------------------------ Rolling gallery */
-/* Full-bleed auto-scrolling photo strip (home page, below the news list).
-   Two identical .marquee-set tracks slide by; translating 50% swaps one for the
-   other, so the loop is seamless. Pauses on hover/focus; stops entirely for
-   visitors who prefer reduced motion. */
-.gallery-note {
-  margin: 0.35rem 0 0;
-  color: var(--text-muted);
-  font-style: italic;
-}
-.marquee {
-  overflow: hidden;
-  padding-block: 1.75rem 3rem;
-}
-.marquee-track {
-  display: flex;
-  width: max-content;
-  animation: marquee-scroll 40s linear infinite;
-  animation-direction: reverse;   /* images travel left -> right; `normal` reverses it */
-}
-/* pause mechanism (hover, or keyboard focus on the strip) */
-.marquee:hover .marquee-track,
-.marquee:focus-within .marquee-track { animation-play-state: paused; }
-
-.marquee-set { display: flex; }
-.marquee figure {
-  margin: 0 1rem 0 0;
-  flex: 0 0 auto;
-  width: 260px;
-}
-.marquee img {
-  width: 260px;
-  height: 185px;
-  object-fit: cover;
-  border: 1px solid var(--hairline);
-  background: var(--bg-panel);
-}
-.marquee figcaption {
-  margin-top: 0.45rem;
-  font-size: 0.88rem;
-  font-style: italic;
-  color: var(--text-muted);
-}
-
-@keyframes marquee-scroll {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .marquee-track { animation: none; }
-  .marquee { overflow-x: auto; }   /* still browsable by scrolling */
 }
 
 /* -------------------------------------------------------------- Research figure */
@@ -590,8 +528,6 @@ figure.research-figure figcaption {
   .lead { font-size: 1.2rem; }
   .people-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 1.5rem 1.25rem; }
   .member-card .avatar { max-width: 130px; }
-  .marquee figure { width: 200px; }
-  .marquee img { width: 200px; height: 142px; }
-  .marquee { padding-block: 1.25rem 2.25rem; }
+  .person { grid-template-columns: 1fr; gap: 0.1rem; }
   .site-badge { height: 40px; }
 }

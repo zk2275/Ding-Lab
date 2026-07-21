@@ -38,18 +38,14 @@
   <section class="hero" aria-label="Introduction">
     <div class="hero-inner">
       <h1 class="hero-title">Ding Lab</h1>
-    </div>
-  </section>
-
-  <main id="main">
-    <!-- Department + address, directly below the "Ding Lab" hero title. -->
-    <section class="affiliation" aria-label="Affiliation">
       <div class="affiliation-text">
         <p class="aff-dept">Department of Biostatistics and Health Data Science</p>
         <p class="aff-addr">A713 Public Health &middot; 130 DeSoto Street &middot; Pittsburgh, PA 15261</p>
       </div>
-    </section>
+    </div>
+  </section>
 
+  <main id="main">
     <section aria-label="About the lab">
       <p class="lead">The Ding Lab is the research group of <strong>Ying Ding</strong>, Professor
       in the Department of Biostatistics and Health Data Science and Associate Dean for Graduate
@@ -165,86 +161,7 @@
       </ul>
     </section>
 
-    <section aria-labelledby="gallery-heading" class="gallery-section">
-      <h2 id="gallery-heading">In the lab</h2>
-      <p class="gallery-note">Moments from the group. <!-- TODO: tweak or delete this line --></p>
-    </section>
   </main>
-
-  <!-- ===== ROLLING GALLERY =====
-       Full-bleed strip that scrolls on its own. It pauses when you hover or tab into it, and
-       holds still for visitors who prefer reduced motion.
-
-       TO ADD A PHOTO: drop the file in assets/img/, then add ONE <figure> to *each* of the two
-       tracks below (.marquee-set). The second set is an exact copy — it exists only to make the
-       loop seamless, and is hidden from screen readers. The two sets MUST stay identical.
-
-       Direction: images currently travel left -> right. To reverse, change
-       `animation-direction` on .marquee-track in style.css from `reverse` to `normal`.
-       Speed: change the `40s` in the .marquee-track animation (bigger = slower). -->
-  <div class="marquee" role="group" aria-label="Photo gallery from the lab" tabindex="0">
-    <div class="marquee-track">
-
-      <!-- ---------- set 1 (the real one) ---------- -->
-      <div class="marquee-set">
-        <figure>
-          <img src="assets/img/public_health.jpg" alt="Pitt Public Health, home of the Department of Biostatistics and Health Data Science">
-          <figcaption>Pitt Public Health</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/img/teaching.jpg" alt="A graduate biostatistics class">
-          <figcaption>In the classroom</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/img/pittsburgh.jpg" alt="The city of Pittsburgh">
-          <figcaption>Our city</figcaption>
-        </figure>
-        <!-- TODO: swap these placeholders for real photos (group meetings, conferences, defenses…) -->
-        <figure>
-          <img src="assets/img/figure-placeholder.svg" alt="Placeholder image">
-          <figcaption>Group meeting</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/img/figure-placeholder.svg" alt="Placeholder image">
-          <figcaption>Conference travel</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/img/figure-placeholder.svg" alt="Placeholder image">
-          <figcaption>Celebrating a milestone</figcaption>
-        </figure>
-      </div>
-
-      <!-- ---------- set 2: exact copy of set 1, for the seamless loop ---------- -->
-      <div class="marquee-set" aria-hidden="true">
-        <figure>
-          <img src="assets/img/public_health.jpg" alt="">
-          <figcaption>Pitt Public Health</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/img/teaching.jpg" alt="">
-          <figcaption>In the classroom</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/img/pittsburgh.jpg" alt="">
-          <figcaption>Our city</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/img/figure-placeholder.svg" alt="">
-          <figcaption>Group meeting</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/img/figure-placeholder.svg" alt="">
-          <figcaption>Conference travel</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/img/figure-placeholder.svg" alt="">
-          <figcaption>Celebrating a milestone</figcaption>
-        </figure>
-      </div>
-
-    </div>
-  </div>
-  <!-- ===== /ROLLING GALLERY ===== -->
 
   <!-- ===== SHARED FOOTER — keep identical across all pages ===== -->
   <footer class="site-footer">

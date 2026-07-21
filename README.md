@@ -32,10 +32,6 @@ yet, copy a whole `<section>`.
 `index.html` → find `Recent news`. Copy an `<li>`, change the date and text. Newest
 goes on top.
 
-### Add a photo to the rolling gallery
-See [Adding photos to the rolling gallery](#adding-photos-to-the-rolling-gallery)
-— there's one rule that's easy to get wrong.
-
 ### Change a research interest or its listed papers
 `index.html` → `Research interests`. Each is one `<article class="interest">`: a
 title, a description, and a `Recent work` line of `(author) year Journal`.
@@ -86,8 +82,7 @@ sense:
    seven. They're marked `<!-- ===== SHARED HEADER ... -->` / `<!-- ===== SHARED FOOTER ... -->`.
 2. **`aria-current="page"`** must sit on the current page's own nav link — that's what
    underlines the active tab.
-3. **The rolling gallery holds two identical photo sets.** Both must match exactly.
-4. **Filenames are case-sensitive in production.** GitHub Pages serves from Linux;
+3. **Filenames are case-sensitive in production.** GitHub Pages serves from Linux;
    macOS doesn't care about case. So `Photo.JPG` referenced as `photo.jpg` works on your
    laptop and 404s on the live site. (This already happened once, with `teaching.JPG`.)
 
@@ -97,7 +92,7 @@ sense:
 
 ```
 labing/
-├── index.html          Home (hero, intro, research interests, news, rolling gallery)
+├── index.html          Home (hero + affiliation, intro, research interests, news)
 ├── about.html          Biography, education, appointments
 ├── research.html       Research areas (placeholder copy + figures)
 ├── publications.html   Selected publications by year
@@ -117,16 +112,16 @@ In use:
 
 | File | Where | Notes |
 |------|-------|-------|
-| `pittsburgh.jpg` | Home hero background, rolling gallery | Hero is set via `url()` in `style.css` (`.hero`). |
-| `Ding_Ying.jpg` | Home intro portrait, People PI card | |
-| `public_health.jpg` | Rolling gallery | |
-| `teaching.jpg` | Teaching banner, rolling gallery | Banner is full-bleed 16:9 (`.page-banner`); natively 16:9, so no crop. |
+| `pittsburgh.jpg` | Home hero background | Set via `url()` in `style.css` (`.hero`). |
+| `Ding_Ying.jpg` | People PI card | |
+| `teaching.jpg` | Teaching banner | Full-bleed 16:9 (`.page-banner`); natively 16:9, so no crop. |
+| `public_health.jpg` | (unused) | Was the rolling gallery, now removed; kept in case you want it. |
 | `School_of_Public_Health.png` | Site header, left of the nav | Official Pitt School of Public Health logo (transparent PNG). Sits in `.site-header-inner`, to the left of the primary nav, on every page. (The header has no text title; the lab name appears in the home hero.) |
 | `<First>_<Last>.jpg/.png` | People — student headshots | One per current student (e.g. `Haoran_Hu.jpg`, `Zhuodiao_Kuang.png`). Square works best; shown as circles cropped near the top. |
 
 Still placeholders, swap when you have real files:
 
-- `figure-placeholder.svg` — three gallery tiles, and the four Research figures.
+- `figure-placeholder.svg` — the four Research figures (see each figure's SUGGESTED-FIGURE comment in `research.html`).
 - `avatar-placeholder.svg` — fallback student headshot (all current students now have real photos, so it's unused; keep it for the next new student until their photo arrives).
 - `banner-placeholder.svg`, `portrait-placeholder.svg` — unused; kept in case you want one back.
 
@@ -138,23 +133,6 @@ in `style.css` (or add an inline `style="object-position: center 30%"` to that o
 Update each image's `alt` text to describe the real photo. If you swap the hero for a
 brighter photo, deepen the overlay alpha in `style.css` (`.hero::before`) so the cream
 title stays readable.
-
-### Adding photos to the rolling gallery
-
-The strip is at the bottom of `index.html`, marked `<!-- ===== ROLLING GALLERY ===== -->`.
-It has **two identical `.marquee-set` blocks** — the second is a copy that makes the loop
-seamless, and is hidden from screen readers.
-
-> **Add your `<figure>` to BOTH sets, in the same order.** If they differ, the loop visibly
-> jumps. `tools/check.py` will catch it.
-
-Tuning, in `style.css` under `.marquee-track`:
-
-- **Speed** — the `40s`; larger is slower.
-- **Direction** — `animation-direction: reverse` sends images left → right; `normal` reverses it.
-
-It pauses on hover or keyboard focus, and stops entirely for visitors whose system asks for
-reduced motion.
 
 ---
 
@@ -185,8 +163,8 @@ a branch → `main` → `/ (root)`), usually within a minute or two.
   Update the list as awards start and end.
 - **Open positions** (the postdoc ad) is a section on `people.html` with `id="openings"`,
   linked from the Home news list and the Contact page. Remove all three when the search closes.
-- The rolling gallery is the one deliberate piece of motion; everything else is static.
-- "University of Pittsburgh" is wrapped in `<span class="pitt">` so it shows in the official
-  Pitt blue (`--pitt-blue` in `style.css`). The department's formal name is
-  **Biostatistics and Health Data Science**.
+- The department's formal name is **Biostatistics and Health Data Science**. "University of
+  Pittsburgh" is wrapped in `<span class="pitt">`, but `.pitt` is currently uncoloured
+  (`color: inherit`) — change that one rule if you ever want it styled again.
+- The site is fully static — no animations.
 - Content still marked `<!-- TODO: -->` throughout — search the project for `TODO`.
