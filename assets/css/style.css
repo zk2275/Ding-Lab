@@ -148,10 +148,6 @@ main {
   margin: 1.1rem 0 0;
 }
 
-/* "Download CV" link under a page title */
-.cv-line { margin: 0 0 2rem; }
-.cv-line a { font-weight: 600; }
-
 /* Lead paragraph — used on the warmer pages */
 .lead {
   font-size: 1.3rem;
