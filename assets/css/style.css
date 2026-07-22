@@ -83,10 +83,15 @@ img { max-width: 100%; height: auto; display: block; }
   gap: 0.75rem 2rem;
   flex-wrap: wrap;
 }
+.site-badge-link {
+  display: inline-flex;
+  flex: 0 0 auto;
+  text-decoration: none;
+}
 .site-badge {
   height: 46px;
   width: auto;
-  flex: 0 0 auto;
+  display: block;
 }
 
 /* Navigation */
@@ -367,6 +372,32 @@ hr.divider {
 .callout h2,
 .callout h3 { border: 0; margin-top: 0; }
 .callout .eeo { font-size: 0.88rem; color: var(--text-muted); margin-top: 0.75rem; }
+
+/* Highlighted callout — used for the open postdoc position, so it reads clearly
+   as a live announcement rather than ordinary body copy. */
+.callout-open {
+  border-left-width: 5px;
+  padding: 1.6rem 1.75rem;
+}
+.callout-open h3 {
+  font-size: 1.7rem;
+  color: var(--accent);
+  margin-bottom: 0.2rem;
+}
+.callout-open .open-tag {
+  display: inline-block;
+  margin-bottom: 0.55rem;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.callout-open .open-lead {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
 
 /* Contact details block */
 .contact-list {
