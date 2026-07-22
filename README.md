@@ -156,9 +156,9 @@ a branch → `main` → `/ (root)`), usually within a minute or two.
 - Fonts (Cormorant Garamond + Source Serif 4) load from Google Fonts.
 - Palette is a warm "walnut on beige" scheme — no drop shadows or gradients. Keep it that
   way for the classical-academic feel.
-- **CV:** `assets/Ding_Ying_CV_2026.docx`, linked from About (under the title) and Contact.
-  To use a PDF instead, add `assets/Ding_Ying_CV_2026.pdf` and update the two `href`s and
-  the "(Word)" labels. `tools/check.py` fails if the linked file is missing.
+- **CV:** `assets/Ding_Ying_CV_2026.docx`, linked from the Contact page.
+  To use a PDF instead, add `assets/Ding_Ying_CV_2026.pdf` and update the `href` and
+  the "(Word)" label. `tools/check.py` fails if the linked file is missing.
 - **Funding** is a section on `research.html` — current/active grants only, no dollar amounts.
   Update the list as awards start and end.
 - **Open positions** (the postdoc ad) is a section on `people.html` with `id="openings"`,
