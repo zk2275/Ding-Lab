@@ -439,6 +439,13 @@ hr.divider {
 }
 .site-footer nav a { text-decoration: none; }
 .site-footer nav a:hover { text-decoration: underline; }
+/* Deliberately understated: its own line at the very bottom, small and faint. */
+.site-footer .last-updated {
+  flex-basis: 100%;
+  margin-top: 0.9rem;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
 
 /* ---------------------------------------------------------------- Hero (home) */
 .hero {

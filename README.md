@@ -28,6 +28,12 @@ the `Alumni` section.
 an existing `<li>`. Keep `<strong>Ding Y</strong>` bold. If the year doesn't exist
 yet, copy a whole `<section>`.
 
+### Bump the "last updated" date
+It sits in the **shared footer** on every page, as
+`<p class="last-updated">Last updated July 22, 2026</p>`. Change it in all seven pages
+(find-and-replace) whenever you make a meaningful content update — a stale date looks
+worse than none, so if you'd rather not maintain it, just delete the line from all pages.
+
 ### Add a news item
 `index.html` → find `Recent news`. Copy an `<li>`, change the date and text. Newest
 goes on top.
