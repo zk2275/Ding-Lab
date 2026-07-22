@@ -3,8 +3,8 @@
 The website for the **Ding Lab** (Ying Ding), Department of Biostatistics,
 University of Pittsburgh.
 
-- **Live site:** https://zk2275.github.io/labing
-- **Repo:** https://github.com/zk2275/labing
+- **Live site:** https://zk2275.github.io/Ding-Lab
+- **Repo:** https://github.com/zk2275/Ding-Lab
 
 Plain HTML and CSS. **No build step, no dependencies, nothing to install.** Edit a
 file, commit it, and the site updates. You do not need to understand the whole
@@ -91,7 +91,7 @@ sense:
 ## Structure
 
 ```
-labing/
+Ding-Lab/
 ├── index.html          Home (hero + affiliation, intro, research interests, news)
 ├── about.html          Biography, education, appointments
 ├── research.html       Research areas (placeholder copy + figures)
